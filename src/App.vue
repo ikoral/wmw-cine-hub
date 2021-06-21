@@ -1,12 +1,30 @@
 <template>
-  <div id="nav">
+  <!-- <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
+  </div> -->
+  <Sidebar />
+  <div :style="{ 'margin-left': sideBarWidth }">
+    <router-view />
   </div>
-  <router-view />
 </template>
 
+<script>
+import Sidebar from "@/components/sidebar/Sidebar";
+import { sideBarWidth } from "@/components/sidebar/side-state";
+
+export default {
+  components: { Sidebar },
+  setup() {
+    return { sideBarWidth };
+  },
+};
+</script>
+
 <style>
+body {
+  background-color: rgb(245, 245, 243);
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
