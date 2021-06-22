@@ -2,7 +2,7 @@
   <router-link :to="to" class="link" :class="{ active: isActive }">
     <i class="icon" :class="icon" />
     <transition name="fade">
-      <span v-if="showSideBar">
+      <span v-if="showSideBar" class="ml-2">
         <slot />
       </span>
     </transition>
@@ -58,6 +58,5 @@ export default {
 .link .icon {
   flex-shrink: 0;
   width: 25px;
-  margin-right: 10px;
 }
 </style>
