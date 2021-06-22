@@ -58,7 +58,7 @@
                 focus:outline-none
               "
             >
-              <img src="../assets/logo.png" class="h-6 w-6 rounded-full mr-2" />
+              <img src="../assets/logo.jpg" class="h-6 w-6 rounded-full mr-2" />
               <p class="text-white font-semibold text-xs mr-3">admin wmw</p>
             </button>
           </div>
@@ -86,7 +86,7 @@
               NEW
             </h2>
           </div>
-          <div class="w-full flex flex-wrap">
+          <div class="w-full flex flex-wrap justify-center md:justify-start">
             <div
               v-for="recent in recentMovies"
               :key="recent.imdbID"

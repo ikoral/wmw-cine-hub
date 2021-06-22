@@ -16,7 +16,7 @@
     <SideLink to="/" icon="fas fa-home">Home</SideLink>
     <SideLink to="/search" icon="fas fa-search">Search</SideLink>
     <h3 class="mt-10 mb-4 mr-6 uppercase" v-if="showSideBar">Channels</h3>
-    <SideLink to="/addchannel" icon="fas fa-plus">Add Channel</SideLink>
+    <SideLink to="/add-channel" icon="fas fa-plus">Add Channel</SideLink>
     <SideLink to="/listchannel" icon="fas fa-list">List Channels</SideLink>
 
     <span

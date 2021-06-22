@@ -2,7 +2,7 @@
   <!-- In Home page card was hard coded.
 In Search page ,I used this card component so I can reuse whenever is necessary  -->
   <div class="p-2 w-48">
-    <div class="bg-light w-full h-auto p-5">
+    <div class="bg-light w-full h-full p-5">
       <img :src="movie.Poster" class="h-auto w-full shadow mb-2" />
       <h1 class="text-sm font-semibold text-white tracking-wide">
         {{ movie.Title }}
