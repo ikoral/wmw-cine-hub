@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-dark h-screen">
+  <div class="bg-dark">
     <div class="flex">
       <!--main content-->
-      <div class="w-full h-full relative overflow-y-scroll">
+      <div class="w-full h-full relative overflow-y-scroll lg:h-screen">
         <!--header-->
         <div
           class="
@@ -65,6 +65,8 @@
         </div>
 
         <!--cine-cards-->
+        <!--This card hard coded here on purpose,
+        I made it component as well please search link-->
         <div>
           <div class="px-6 py-3 flex items-center justify-between">
             <h1
@@ -90,10 +92,14 @@
               :key="recent.imdbID"
               class="p-2 w-48"
             >
-              <div class="bg-light w-full h-auto p-5">
+              <div class="bg-light w-full h-full p-4">
                 <img :src="recent.Poster" class="h-auto w-full shadow mb-2" />
-                <h1 class="text-sm font-semibold text-white tracking-wide"></h1>
-                <h2 class="text-ws text-lightest tracking-wide"></h2>
+                <h1 class="text-sm font-semibold text-white tracking-wide">
+                  {{ recent.Title }}
+                </h1>
+                <h2 class="text-xs text-lightest tracking-wide mt-2">
+                  {{ recent.imdbID }}
+                </h2>
               </div>
             </div>
           </div>
@@ -105,7 +111,7 @@
 
 <script>
 import { onMounted, ref } from "vue";
-import axios from "axios";
+import { $http } from "../main";
 export default {
   name: "Home",
   components: {},
@@ -116,8 +122,7 @@ export default {
       //API key can/should be used in .env file, for simplicity added here.
       let config = { headers: { Accept: "application/json" } };
       const url = "http://www.omdbapi.com/?apikey=8735ef34&s=love&y=2021";
-      const result = await axios.get(url, config);
-      console.log(result.data.Search);
+      const result = await $http.get(url, config);
       recentMovies.value = result.data.Search;
     };
 
