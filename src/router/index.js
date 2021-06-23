@@ -17,6 +17,11 @@ const routes = [
     name: "AddChannel",
     component: () => import("../views/AddChannel.vue"),
   },
+  {
+    path: "/movies/:id",
+    name: "MovieDetails",
+    component: () => import("../views/movie/MovieDetails.vue"),
+  },
 ];
 
 const router = createRouter({

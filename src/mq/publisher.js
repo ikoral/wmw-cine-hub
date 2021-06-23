@@ -30,5 +30,7 @@ runPublisher().then((data) => {
         console.log(data)
     })
 })
+
+
 exports.sendJob = sendJob;
 exports.runPublisher = runPublisher;

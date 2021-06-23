@@ -24,7 +24,7 @@
 <script>
 import { showSideBar, toggleSideBar } from "@/components/sidebar/side-state";
 import { ref } from "vue";
-import MovieCard from "../components/cards/MovieCard.vue";
+import MovieCard from "../components/movie/MovieCard.vue";
 export default {
   components: { MovieCard },
   setup() {

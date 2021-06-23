@@ -5,16 +5,18 @@
   </div> -->
   <Sidebar />
   <div :style="{ 'margin-left': sideBarWidth }">
+    <Header />
     <router-view />
   </div>
 </template>
 
 <script>
 import Sidebar from "@/components/sidebar/Sidebar";
+import Header from "@/components/Header";
 import { sideBarWidth } from "@/components/sidebar/side-state";
 
 export default {
-  components: { Sidebar },
+  components: { Header, Sidebar },
   setup() {
     return { sideBarWidth };
   },
