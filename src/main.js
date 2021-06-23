@@ -6,6 +6,7 @@ import axios from "axios";
 import "./style.css";
 
 import "@fortawesome/fontawesome-free/js/all";
+
 export const $http = axios;
 
 createApp(App).use(router).mount("#app");
