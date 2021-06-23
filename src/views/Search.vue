@@ -33,7 +33,8 @@ export default {
     const searchTerm = ref("");
 
     const searchMovie = () => {
-      //API key can/should be used in .env file, for simplicity added here.
+      // API key can be taken by user credential (bearer when the user logged in)
+      // I threaded this is an public API.
       const url =
         "http://www.omdbapi.com/?apikey=8735ef34&s=" + searchTerm.value;
 

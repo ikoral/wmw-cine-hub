@@ -27,11 +27,13 @@ export default {
     const recentMovies = ref([]);
 
     const getRecentMovies = async () => {
-      //API key can/should be used in .env file, for simplicity added here.
+      // API key can be taken by user credential (bearer when the user logged in)
+      // I threaded this is an public API.
       let config = { headers: { Accept: "application/json" } };
       const url = "http://www.omdbapi.com/?apikey=8735ef34&s=love&y=2021";
       const result = await $http.get(url, config);
       recentMovies.value = result.data.Search;
+      console.log(recentMovies.value);
     };
 
     onMounted(() => {
