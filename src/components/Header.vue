@@ -1,8 +1,8 @@
 <template>
   <!--header-->
-  <div class="bg-dark">
+  <div class="bg-gradient-to-l from-dark to to-gray-600">
     <div
-      class="w-full sticky top-0 py-2 px-6 flex items-center justify-between"
+      class="w-full py-2 px-6 flex items-center justify-between sticky top-0"
     >
       <!--arrow buttons-->
       <div class="flex items-center">
