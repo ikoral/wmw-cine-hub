@@ -28,7 +28,7 @@ import MovieCard from "../components/movie/MovieCard.vue";
 export default {
   components: { MovieCard },
   setup() {
-    // wee need to use ref in Vue3 to make values reactive.
+    // INFO wee need to use ref in Vue3 to make values reactive.
     const moviesList = ref([]);
     const searchTerm = ref("");
 

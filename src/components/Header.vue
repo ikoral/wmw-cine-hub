@@ -7,6 +7,7 @@
       <!--arrow buttons-->
       <div class="flex items-center">
         <button
+          @click="back"
           class="
             rounded-full
             bg-black
@@ -20,6 +21,7 @@
           <i class="fas fa-angle-left text-2xl"></i>
         </button>
         <button
+          @click="forward"
           class="rounded-full bg-black w-8 h-8 text-white focus:outline-none"
         >
           <i class="fas fa-angle-right text-2xl"></i>
@@ -48,5 +50,17 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    forward() {
+      this.$router.go(+1);
+    },
+    back() {
+      this.$router.go(-1);
+    },
+    toSomewhere() {
+      this.$router.push({ name: "Home" });
+    },
+  },
+};
 </script>

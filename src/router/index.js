@@ -31,7 +31,7 @@ const routes = [
     component: () => import("../views/HelperViews/NotExist.vue"),
   },
 
-  // forward
+  //forward
   {
     path: "/movies",
     redirect: "/",
