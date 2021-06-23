@@ -2,7 +2,7 @@
   <div class="bg-dark">
     <div class="flex">
       <!--main content-->
-      <div class="w-full h-full relative lg:h-screen">
+      <div class="w-full h-full relative overflow-y-scroll lg:h-screen">
         <!--cine-cards-->
         <div class="w-full flex flex-wrap">
           <MovieCard

@@ -21,6 +21,20 @@ const routes = [
     path: "/movies/:id",
     name: "MovieDetails",
     component: () => import("../views/movie/MovieDetails.vue"),
+    props: true,
+  },
+
+  //Not Found
+  {
+    path: "/:catchAll(.*)",
+    name: "NotExist",
+    component: () => import("../views/HelperViews/NotExist.vue"),
+  },
+
+  // forward
+  {
+    path: "/movies",
+    redirect: "/",
   },
 ];
 

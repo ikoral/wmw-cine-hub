@@ -6,10 +6,13 @@
 <script>
 // I used here vue option API, still in use for small projects
 export default {
-  data() {
-    return {
-      id: this.$route.params.id,
-    };
-  },
+  props: ["id"],
+
+  //   Because in index.js router props activated, we don't need to return as data
+  //   data() {
+  //     return {
+  //       id: this.$route.params.id,
+  //     };
+  //   },
 };
 </script>
